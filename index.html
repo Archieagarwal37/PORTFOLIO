@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Personal Portfolio Website designing -K2inofocom</title>
+   <!---external css ---->
+   <link rel="stylesheet" href="style.css">
+   <!---font awesome cdn for font icons---->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+   <div class="container">
+      <div class="profile-card">
+         <div class="profile-pic">
+            <img src="WhatsApp Image 2024-09-27 at 10.50.06 PM.jpeg" alt="user avatar">
+         </div>
+
+         <div class="profile-details">
+            <div class="intro">
+               <h2>ARCHIE AGARWAL</h2>
+               <h4>UI / UX Designer</h4>
+               <div class="social">
+                  <a href="https://instagram.com/uxui_by_archieagarwal?igshid=MzRlODBiNWFlZA=="><i
+                        class="fab fa-instagram" style="color:var(--blue)"></i></a>
+                  <a href="https://www.behance.net/archieagarwal2"><i class="fab fa-behance"
+                        style="color:var(--skyblue)"></i></a>
+                  <a href="https://pin.it/5dD2t2Ezr"><i class="fab fa-pinterest" style="color:var(--dark-pink)"></i></a>
+                  <a href="https://www.linkedin.com/in/archie-agarwal-b45993272"><i class="fab fa-linkedin"
+                        style="color:var(--light-blue)"></i></a>
+               </div>
+            </div>
+
+            <div class="contact-info">
+               <div class="row">
+                  <div class="icon">
+                     <i class="fa fa-phone" style="color:var(--dark-magenta)"></i>
+                  </div>
+                  <div class="content">
+                     <span>Phone</span>
+                     <h5>8445265545</h5>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="icon">
+                     <i class="fa fa-envelope-open" style="color:var(--light-green)"></i>
+                  </div>
+                  <div class="content">
+                     <span>Email</span>
+                     <h5>archieagarwal37a@gmail.com</h5>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="icon">
+                     <i class="fa fa-map-marker" style="color:var(--light-purple)"></i>
+                  </div>
+                  <div class="content">
+                     <span>Location</span>
+                     <h5>Ghaziabad</h5>
+                  </div>
+               </div>
+
+            </div>
+            <a href="https://drive.google.com/file/d/1PFGlrlgTtnqUCBz8U6zA9jCdxEG7Ijim/view?usp=sharing">
+               <button class="download-btn"><i class="fa fa-download"> </i>Download Resume</button>
+           </a>
+         </div>
+      </div>
+
+
+
+
+
+
+
+      <!----about section ----->
+      <div class="about">
+         <div class="container1">
+            <p style="color: bisque; font-size: 70px;" class="ab">
+               Hey, I am Archie.<br>I design <span class="dynamic-text" id="dynamicText"></span>
+            </p>
+         </div>
+
+         <p class="bc">
+            My aim is to bring across your message and identity in the most creative way.
+            <br>If you are looking for someone who brings creativity with a practical approach, let's connect and talk!
+         </p>
+
+      </div>
+   </div>
+   <br>
+   <br>
+
+
+   <script>
+      const dynamicTexts = ["Websites", "Illustrations", "Logo"];
+      let currentIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      const typingSpeed = 100; // Typing speed for individual characters
+      const pauseDuration = 2000; // Pause between words
+
+      const dynamicTextElement = document.getElementById('dynamicText');
+
+      function typeEffect() {
+         const currentText = dynamicTexts[currentIndex];
+         if (isDeleting) {
+            // Deleting effect
+            dynamicTextElement.textContent = currentText.substring(0, charIndex--);
+            if (charIndex < 0) {
+               isDeleting = false;
+               currentIndex = (currentIndex + 1) % dynamicTexts.length; // Move to the next word
+               setTimeout(typeEffect, typingSpeed); // Small pause before typing again
+            } else {
+               setTimeout(typeEffect, typingSpeed / 2); // Speed up when deleting
+            }
+         } else {
+            // Typing effect
+            dynamicTextElement.textContent = currentText.substring(0, charIndex++);
+            if (charIndex > currentText.length) {
+               isDeleting = true;
+               setTimeout(typeEffect, pauseDuration); // Pause after typing a word
+            } else {
+               setTimeout(typeEffect, typingSpeed);
+            }
+         }
+      }
+
+      // Start the typing effect when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+         setTimeout(typeEffect, typingSpeed);
+      });
+   </script>
+
+
+
+
+
+
+
+   <div class="about2">
+      <h1>Work</h1>
+
+      <p> I'm a UI/UX Designer from Agra,
+         currently pursuing B.Tech degree. I enjoy turning complex problems into simple and
+         beautiful designs.
+      </p>
+
+      <p>
+         My aim is to create a seamless, intuitive, and enjoyable experience for users interacting with a
+         product, whether it be a website, mobile app, or software application or an illustration or a Logo
+         design...
+      </p>
+      <h2>Website Designs !!</h2>
+      <div class="work">
+         <div class="workbox">
+            <div class="icon">
+               <img src="images/001.png" style="width: 300px; height: 200px">
+            </div>
+
+            <div class="desc">
+               <h3 style="margin-left: 20px; margin-top: 20px;">Sign Up Registration Page</h3>
+               <p>The design aims to enhance user engagement and increase sign-up rates.<br>
+                  Through this project, I learned the importance of balancing usability with
+                  visual appeal, which I
+                  will apply to future designs.
+               </p>
+            </div>
+         </div>
+
+         <br>
+         <div class="work">
+            <div class="workbox">
+               <div class="icon">
+                  <img src="images/Food Web design.png" style="width: 300px; height: 200px">
+               </div>
+
+               <div class="desc">
+                  <h3 style="margin-left: 20px; margin-top: 20px;">Restaurant Website</h3>
+                  <p>The objective of this restaurant menu page design was to create an engaging and 
+                     informative platform for users to explore the dishes offered at the restaurant.
+                     The target audience includes local diners and families looking for a delightful
+                     dining experience.
+                  </p>
+               </div>
+            </div>
+
+            <br>
+            <div class="work">
+               <div class="workbox">
+                  <div class="icon">
+                     <img src="images/registration.jpeg" style="width: 300px; height: 200px">
+                  </div>
+
+                  <div class="desc">
+                     <h3 style="margin-left: 20px; margin-top: 20px;">ToDo App</h3>
+                     <p>The objective of this to-do list app design was to create a user-friendly
+                         platform that helps users efficiently manage their tasks and improve 
+                         productivity. The target audience includes students and professionals 
+                         looking for a simple yet effective way to stay organized.
+                     </p>
+                  </div>
+               </div>
+
+            </div>
+            <br>
+            <div class="work">
+               <div class="workbox">
+                  <div class="icon">
+                     <img src="images/Shoping page.png" style="width: 300px; height: 200px">
+                  </div>
+
+                  <div class="desc">
+                     <h3 style="margin-left: 20px; margin-top: 20px;">Shopping App</h3>
+                     <p>The objective of this shopping app design was to create an engaging and 
+                        user-friendly platform that allows users to browse and purchase products 
+                        effortlessly. The target audience includes fashion enthusiasts and tech-savvy 
+                        consumers seeking a seamless shopping experience.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+      </div>
+      <h2>Illustrations !!</h2>
+      <div class="work4">
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/Illustration3.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Silence Smoke</h3>
+               <p>Art Exhibitions / Mental Health Campaigns</p>
+            </div>
+         </div>
+
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/p11.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Prism of Strength</h3>
+               <p>Album Covers / Wall Art Prints</p>
+            </div>
+         </div>
+
+
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/girl.jpeg" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Striking Presence</h3>
+               <p>Fashion and LifeStyle / Women Empowerment</p>
+            </div>
+         </div>
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/17.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Medicare Minds</h3>
+               <p>Healthcare Websites and Campaigns</p>
+            </div>
+         </div>
+
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/sketch.jpeg" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Gentle Grace</h3>
+               <p>Interior Designs / Modern Aesthetics</p>
+            </div>
+         </div>
+
+
+         <div class="workbox1">
+            <div class="icon1">
+               <img src="images/wolf.jpeg" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc1">
+               <h3>Brand Logo</h3>
+               <p>Brand Identity</p>
+            </div>
+         </div>
+      </div>
+
+
+
+      <h2>Logos !!</h2>
+
+
+
+      <div class="work5">
+         <div class="workbox2">
+            <div class="icon2">
+               <img src="images/005.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc2">
+               <h3>ShareIt</h3>
+               <p>Application Sharing App logo</p>
+            </div>
+
+
+
+            <div class="icon2">
+               <img src="images/Deer.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc2">
+               <h3>Nordic Deer</h3>
+               <p>Vector Design</p>
+            </div>
+
+
+
+
+            <div class="icon2">
+               <img src="images/Favorite.png" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc2">
+               <h3>Crave & Dine</h3>
+               <p>Restaurant Logo Design</p>
+            </div>
+         </div>
+      </div>
+
+
+
+
+   </div>
+
+   <br>
+   <br>
+
+   <!-- stack -->
+
+   <div class="about3">
+      <h1>Stack</h1>
+
+      <p> Tools I use & love that you should check out 🛠️. <br> I enjoy turning complex problems into simple,
+         beautiful and intuitive designs.
+      </p>
+      <div class="work">
+         <div class="workbox">
+            <div class="icon">
+               <img src="WhatsApp Image 2024-09-28 at 12.43.59 AM.jpeg" style="height: 70px; width: 100px;" alt="">
+            </div>
+            <div class="desc">
+               <h3>Figma</h3>
+               <p>Design Tool</p>
+            </div>
+         </div>
+
+         <div class="workbox">
+            <div class="icon">
+               <img src="WhatsApp Image 2024-09-28 at 12.57.54 AM.jpeg" style="height: 70px; width: 80px;" alt="">
+            </div>
+            <div class="desc">
+               <h3>Adobe Photoshop</h3>
+               <p>Design Tool</p>
+            </div>
+         </div>
+
+         <div class="workbox">
+            <div class="icon">
+               <img src="WhatsApp Image 2024-09-28 at 12.57.13 AM.jpeg" style="height: 70px; width: 70px;" alt="">
+            </div>
+            <div class="desc">
+               <h3>Notion</h3>
+               <p>Documentation Tool</p>
+            </div>
+         </div>
+
+         <div class="workbox">
+            <div class="icon">
+               <img src="WhatsApp Image 2024-09-28 at 12.45.31 AM.jpeg" style="height: 70px; width: 120px;" alt="">
+            </div>
+            <div class="desc">
+               <h3>Canva</h3>
+               <p>Graphic Designing Tool</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
